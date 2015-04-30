@@ -37,10 +37,11 @@ public class StartGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        regTile = new javax.swing.JLabel();
-        logTile = new javax.swing.JLabel();
+        welcomeTitle = new javax.swing.JLabel();
         closeB = new javax.swing.JLabel();
         miniB = new javax.swing.JLabel();
+        regTile = new javax.swing.JLabel();
+        logTile = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         frameDrag = new javax.swing.JLabel();
 
@@ -54,6 +55,27 @@ public class StartGUI extends javax.swing.JFrame {
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        welcomeTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/WelcomeTitle.png"))); // NOI18N
+        getContentPane().add(welcomeTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, -1, -1));
+
+        closeB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/close.png"))); // NOI18N
+        closeB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        closeB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeBMouseClicked(evt);
+            }
+        });
+        getContentPane().add(closeB, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 50, -1));
+
+        miniB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/mini.png"))); // NOI18N
+        miniB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        miniB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                miniBMouseClicked(evt);
+            }
+        });
+        getContentPane().add(miniB, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
 
         regTile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/RegisterTile.png"))); // NOI18N
         regTile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -72,22 +94,6 @@ public class StartGUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(logTile, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, -1, -1));
-
-        closeB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        closeB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeBMouseClicked(evt);
-            }
-        });
-        getContentPane().add(closeB, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 50, 20));
-
-        miniB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        miniB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                miniBMouseClicked(evt);
-            }
-        });
-        getContentPane().add(miniB, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 50, 20));
 
         background.setFont(new java.awt.Font("Segoe UI Light", 0, 11)); // NOI18N
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -119,14 +125,6 @@ public class StartGUI extends javax.swing.JFrame {
         
         setCursor(cursor);
     }
-    private void miniBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miniBMouseClicked
-        this.setState(StartGUI.ICONIFIED);
-    }//GEN-LAST:event_miniBMouseClicked
-
-    private void closeBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_closeBMouseClicked
-
     private void frameDragMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frameDragMouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
@@ -148,6 +146,14 @@ public class StartGUI extends javax.swing.JFrame {
         new loginGUI().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_logTileMouseReleased
+
+    private void closeBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_closeBMouseClicked
+
+    private void miniBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miniBMouseClicked
+        this.setState(adminGUI.ICONIFIED);
+    }//GEN-LAST:event_miniBMouseClicked
 
     /**
      * @param args the command line arguments
@@ -197,5 +203,6 @@ public class StartGUI extends javax.swing.JFrame {
     private javax.swing.JLabel logTile;
     private javax.swing.JLabel miniB;
     private javax.swing.JLabel regTile;
+    private javax.swing.JLabel welcomeTitle;
     // End of variables declaration//GEN-END:variables
 }

@@ -36,16 +36,16 @@ public class loginGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backTile = new javax.swing.JLabel();
+        username = new javax.swing.JTextField();
         password = new javax.swing.JTextField();
+        miniB = new javax.swing.JLabel();
+        closeB = new javax.swing.JLabel();
+        logTile = new javax.swing.JLabel();
+        backTile = new javax.swing.JLabel();
         passwordField = new javax.swing.JPasswordField();
         usernameField = new javax.swing.JTextField();
-        username = new javax.swing.JTextField();
         alertBar = new javax.swing.JTextField();
-        logButton = new javax.swing.JButton();
-        registerTitle = new javax.swing.JLabel();
-        closeB = new javax.swing.JLabel();
-        miniB = new javax.swing.JLabel();
+        loginTitle = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         frameDrag = new javax.swing.JLabel();
 
@@ -58,6 +58,62 @@ public class loginGUI extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        username.setEditable(false);
+        username.setBackground(new java.awt.Color(105, 105, 105));
+        username.setFont(new java.awt.Font("Raleway", 2, 36)); // NOI18N
+        username.setForeground(new java.awt.Color(255, 255, 255));
+        username.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        username.setText("Username:");
+        username.setToolTipText("");
+        username.setBorder(null);
+        username.setOpaque(false);
+        username.setSelectionColor(new java.awt.Color(56, 195, 228));
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 180, 40));
+
+        password.setEditable(false);
+        password.setBackground(new java.awt.Color(105, 105, 105));
+        password.setFont(new java.awt.Font("Raleway", 2, 36)); // NOI18N
+        password.setForeground(new java.awt.Color(255, 255, 255));
+        password.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        password.setText("Password:");
+        password.setToolTipText("");
+        password.setBorder(null);
+        password.setOpaque(false);
+        password.setSelectionColor(new java.awt.Color(56, 195, 228));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 170, 40));
+
+        miniB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/mini.png"))); // NOI18N
+        miniB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        miniB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                miniBMouseClicked(evt);
+            }
+        });
+        getContentPane().add(miniB, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
+
+        closeB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/close.png"))); // NOI18N
+        closeB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        closeB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeBMouseClicked(evt);
+            }
+        });
+        getContentPane().add(closeB, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 50, -1));
+
+        logTile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/LoginTile.png"))); // NOI18N
+        logTile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        logTile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                logTileMouseReleased(evt);
+            }
+        });
+        getContentPane().add(logTile, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, -1, -1));
+
         backTile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/BackTile.png"))); // NOI18N
         backTile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backTile.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -67,22 +123,13 @@ public class loginGUI extends javax.swing.JFrame {
         });
         getContentPane().add(backTile, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
-        password.setEditable(false);
-        password.setBackground(new java.awt.Color(105, 105, 105));
-        password.setFont(new java.awt.Font("Raleway", 0, 24)); // NOI18N
-        password.setForeground(new java.awt.Color(255, 255, 255));
-        password.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        password.setText("Password:");
-        password.setToolTipText("");
-        password.setBorder(null);
-        password.setOpaque(false);
-        password.setSelectionColor(new java.awt.Color(0, 255, 255));
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 120, 20));
-
+        passwordField.setBackground(new java.awt.Color(105, 105, 105));
         passwordField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        passwordField.setForeground(new java.awt.Color(255, 255, 255));
         passwordField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         passwordField.setText("Password");
         passwordField.setBorder(null);
+        passwordField.setSelectionColor(new java.awt.Color(56, 195, 228));
         passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordFieldActionPerformed(evt);
@@ -93,12 +140,15 @@ public class loginGUI extends javax.swing.JFrame {
                 passwordFieldKeyPressed(evt);
             }
         });
-        getContentPane().add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 230, 50));
+        getContentPane().add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 230, 50));
 
-        usernameField.setFont(new java.awt.Font("Raleway", 0, 18)); // NOI18N
+        usernameField.setBackground(new java.awt.Color(105, 105, 105));
+        usernameField.setFont(new java.awt.Font("Raleway", 0, 36)); // NOI18N
+        usernameField.setForeground(new java.awt.Color(255, 255, 255));
         usernameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        usernameField.setText("Username");
+        usernameField.setText("Type Here");
         usernameField.setBorder(null);
+        usernameField.setSelectionColor(new java.awt.Color(56, 195, 228));
         usernameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameFieldActionPerformed(evt);
@@ -109,19 +159,7 @@ public class loginGUI extends javax.swing.JFrame {
                 usernameFieldKeyPressed(evt);
             }
         });
-        getContentPane().add(usernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 172, 230, 50));
-
-        username.setEditable(false);
-        username.setBackground(new java.awt.Color(105, 105, 105));
-        username.setFont(new java.awt.Font("Raleway", 0, 24)); // NOI18N
-        username.setForeground(new java.awt.Color(255, 255, 255));
-        username.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        username.setText("Username:");
-        username.setToolTipText("");
-        username.setBorder(null);
-        username.setOpaque(false);
-        username.setSelectedTextColor(new java.awt.Color(0, 255, 255));
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 120, 20));
+        getContentPane().add(usernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 230, 50));
 
         alertBar.setEditable(false);
         alertBar.setBackground(new java.awt.Color(105, 105, 105));
@@ -130,39 +168,10 @@ public class loginGUI extends javax.swing.JFrame {
         alertBar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         alertBar.setBorder(null);
         alertBar.setOpaque(false);
-        getContentPane().add(alertBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 490, 30));
+        getContentPane().add(alertBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 490, 30));
 
-        logButton.setText("Login");
-        logButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                logButtonMouseReleased(evt);
-            }
-        });
-        logButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(logButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 130, 50));
-
-        registerTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/logTitle.png"))); // NOI18N
-        getContentPane().add(registerTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, -1, -1));
-
-        closeB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        closeB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeBMouseClicked(evt);
-            }
-        });
-        getContentPane().add(closeB, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 50, 20));
-
-        miniB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        miniB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                miniBMouseClicked(evt);
-            }
-        });
-        getContentPane().add(miniB, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 50, 20));
+        loginTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/logTitle.png"))); // NOI18N
+        getContentPane().add(loginTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, -1, -1));
 
         background.setFont(new java.awt.Font("Segoe UI Light", 0, 11)); // NOI18N
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -194,14 +203,6 @@ public class loginGUI extends javax.swing.JFrame {
         
         setCursor(cursor);
     }
-    private void miniBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miniBMouseClicked
-        this.setState(loginGUI.ICONIFIED);
-    }//GEN-LAST:event_miniBMouseClicked
-
-    private void closeBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_closeBMouseClicked
-
     private void frameDragMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frameDragMouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
@@ -213,24 +214,6 @@ public class loginGUI extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_frameDragMousePressed
-
-    private void logButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logButtonActionPerformed
-        String pass = new String(passwordField.getPassword());
-        DBClass DB = new DBClass();
-        if (DB.checkAdminLogin(usernameField.getText(), pass) == true){
-            alertBar.setText("Admin Recognized.");
-        }
-        else if (DB.checkLogin(usernameField.getText(), pass) == true){
-            alertBar.setText("Login Correct");
-        }
-        else{
-            alertBar.setText("Invalid login");
-        }
-    }//GEN-LAST:event_logButtonActionPerformed
-
-    private void logButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logButtonMouseReleased
-
-    }//GEN-LAST:event_logButtonMouseReleased
 
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
@@ -251,10 +234,12 @@ public class loginGUI extends javax.swing.JFrame {
             String pass = new String(passwordField.getPassword());
             DBClass DB = new DBClass();
             if (DB.checkAdminLogin(usernameField.getText(), pass) == true){
-                alertBar.setText("Admin Recognized.");
+                this.setVisible(false);
+                new adminGUI().setVisible(true);
             }
             else if (DB.checkLogin(usernameField.getText(), pass) == true){
-                alertBar.setText("Login Correct");
+                this.setVisible(false);
+                new userGUI().setVisible(true);
             }
             else{
                 alertBar.setText("Invalid login");
@@ -268,16 +253,46 @@ public class loginGUI extends javax.swing.JFrame {
             String pass = new String(passwordField.getPassword());
             DBClass DB = new DBClass();
             if (DB.checkAdminLogin(usernameField.getText(), pass) == true){
-                alertBar.setText("Admin Recognized.");
+                this.setVisible(false);
+                new adminGUI().setVisible(true);
             }
             else if (DB.checkLogin(usernameField.getText(), pass) == true){
-                alertBar.setText("Login Correct");
+                this.setVisible(false);
+                new userGUI().setVisible(true);
             }
             else{
                 alertBar.setText("Invalid login");
             }
         }   
     }//GEN-LAST:event_passwordFieldKeyPressed
+
+    private void logTileMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logTileMouseReleased
+        String pass = new String(passwordField.getPassword());
+        DBClass DB = new DBClass();
+        if (DB.checkAdminLogin(usernameField.getText(), pass) == true){
+            this.setVisible(false);
+            new adminGUI().setVisible(true);
+        }
+        else if (DB.checkLogin(usernameField.getText(), pass) == true){
+            this.setVisible(false);
+            new userGUI().setVisible(true);
+        }
+        else{
+            alertBar.setText("Invalid login");
+        }
+    }//GEN-LAST:event_logTileMouseReleased
+
+    private void miniBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miniBMouseClicked
+        this.setState(adminGUI.ICONIFIED);
+    }//GEN-LAST:event_miniBMouseClicked
+
+    private void closeBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_closeBMouseClicked
+
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,11 +344,11 @@ public class loginGUI extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JLabel closeB;
     private javax.swing.JLabel frameDrag;
-    private javax.swing.JButton logButton;
+    private javax.swing.JLabel logTile;
+    private javax.swing.JLabel loginTitle;
     private javax.swing.JLabel miniB;
     private javax.swing.JTextField password;
     private javax.swing.JPasswordField passwordField;
-    private javax.swing.JLabel registerTitle;
     private javax.swing.JTextField username;
     private javax.swing.JTextField usernameField;
     // End of variables declaration//GEN-END:variables

@@ -35,8 +35,8 @@ public class adminGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        alertBar = new javax.swing.JTextField();
-        logButton = new javax.swing.JButton();
+        adminTitle = new javax.swing.JLabel();
+        checkUser = new javax.swing.JButton();
         registerTitle = new javax.swing.JLabel();
         closeB = new javax.swing.JLabel();
         miniB = new javax.swing.JLabel();
@@ -52,46 +52,42 @@ public class adminGUI extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        alertBar.setEditable(false);
-        alertBar.setBackground(new java.awt.Color(105, 105, 105));
-        alertBar.setFont(new java.awt.Font("Raleway", 1, 18)); // NOI18N
-        alertBar.setForeground(new java.awt.Color(255, 0, 0));
-        alertBar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        alertBar.setBorder(null);
-        alertBar.setOpaque(false);
-        getContentPane().add(alertBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 490, 30));
+        adminTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/adminTitle.png"))); // NOI18N
+        getContentPane().add(adminTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, -1, -1));
 
-        logButton.setText("Check Users");
-        logButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        checkUser.setText("Check Users");
+        checkUser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                logButtonMouseReleased(evt);
+                checkUserMouseReleased(evt);
             }
         });
-        logButton.addActionListener(new java.awt.event.ActionListener() {
+        checkUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logButtonActionPerformed(evt);
+                checkUserActionPerformed(evt);
             }
         });
-        getContentPane().add(logButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 130, 50));
+        getContentPane().add(checkUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 130, 50));
 
         registerTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/adminTitle.png"))); // NOI18N
         getContentPane().add(registerTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, -1, -1));
 
+        closeB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/close.png"))); // NOI18N
         closeB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         closeB.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 closeBMouseClicked(evt);
             }
         });
-        getContentPane().add(closeB, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 50, 20));
+        getContentPane().add(closeB, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 50, -1));
 
+        miniB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/mini.png"))); // NOI18N
         miniB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         miniB.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 miniBMouseClicked(evt);
             }
         });
-        getContentPane().add(miniB, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 50, 20));
+        getContentPane().add(miniB, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
 
         background.setFont(new java.awt.Font("Segoe UI Light", 0, 11)); // NOI18N
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -143,13 +139,13 @@ public class adminGUI extends javax.swing.JFrame {
         yMouse = evt.getY();
     }//GEN-LAST:event_frameDragMousePressed
 
-    private void logButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logButtonActionPerformed
+    private void checkUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkUserActionPerformed
 
-    }//GEN-LAST:event_logButtonActionPerformed
+    }//GEN-LAST:event_checkUserActionPerformed
 
-    private void logButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logButtonMouseReleased
+    private void checkUserMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkUserMouseReleased
 
-    }//GEN-LAST:event_logButtonMouseReleased
+    }//GEN-LAST:event_checkUserMouseReleased
 
     /**
      * @param args the command line arguments
@@ -200,11 +196,11 @@ public class adminGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField alertBar;
+    private javax.swing.JLabel adminTitle;
     private javax.swing.JLabel background;
+    private javax.swing.JButton checkUser;
     private javax.swing.JLabel closeB;
     private javax.swing.JLabel frameDrag;
-    private javax.swing.JButton logButton;
     private javax.swing.JLabel miniB;
     private javax.swing.JLabel registerTitle;
     // End of variables declaration//GEN-END:variables
