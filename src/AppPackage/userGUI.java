@@ -71,6 +71,11 @@ public class userGUI extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         submitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/submitButton.png"))); // NOI18N
+        submitButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                submitButtonMouseReleased(evt);
+            }
+        });
         getContentPane().add(submitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, -1, -1));
 
         brokeTitle.setEditable(false);
@@ -292,7 +297,6 @@ public class userGUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(800, 598));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
     
     public void CustomCursor(){
         Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -353,6 +357,13 @@ public class userGUI extends javax.swing.JFrame {
     private void brokeTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brokeTitleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_brokeTitleActionPerformed
+
+    private void submitButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitButtonMouseReleased
+        this.setVisible(false);
+        StartGUI start = new StartGUI();
+        start.setVisible(true);
+        start.setLocation(this.getX(),this.getY());
+    }//GEN-LAST:event_submitButtonMouseReleased
 
     /**
      * @param args the command line arguments

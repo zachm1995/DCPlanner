@@ -112,7 +112,7 @@ public class loginGUI extends javax.swing.JFrame {
                 logTileMouseReleased(evt);
             }
         });
-        getContentPane().add(logTile, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, -1, -1));
+        getContentPane().add(logTile, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, -1, -1));
 
         backTile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/BackTile.png"))); // NOI18N
         backTile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -225,7 +225,9 @@ public class loginGUI extends javax.swing.JFrame {
 
     private void backTileMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backTileMouseReleased
         this.setVisible(false);
-        new StartGUI().setVisible(true);
+        StartGUI start = new StartGUI();
+        start.setVisible(true);
+        start.setLocation(this.getX(),this.getY());
     }//GEN-LAST:event_backTileMouseReleased
 
     private void usernameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameFieldKeyPressed
@@ -235,11 +237,15 @@ public class loginGUI extends javax.swing.JFrame {
             DBClass DB = new DBClass();
             if (DB.checkAdminLogin(usernameField.getText(), pass) == true){
                 this.setVisible(false);
-                new adminGUI().setVisible(true);
+                adminGUI admin = new adminGUI();
+                admin.setVisible(true);
+                admin.setLocation(this.getX(),this.getY());
             }
             else if (DB.checkLogin(usernameField.getText(), pass) == true){
                 this.setVisible(false);
-                new userGUI().setVisible(true);
+                StartGUI start = new StartGUI();
+                start.setVisible(true);
+                start.setLocation(this.getX(),this.getY());
             }
             else{
                 alertBar.setText("Invalid login");
@@ -258,7 +264,9 @@ public class loginGUI extends javax.swing.JFrame {
             }
             else if (DB.checkLogin(usernameField.getText(), pass) == true){
                 this.setVisible(false);
-                new userGUI().setVisible(true);
+                StartGUI start = new StartGUI();
+                start.setVisible(true);
+                start.setLocation(this.getX(),this.getY());
             }
             else{
                 alertBar.setText("Invalid login");
@@ -275,7 +283,9 @@ public class loginGUI extends javax.swing.JFrame {
         }
         else if (DB.checkLogin(usernameField.getText(), pass) == true){
             this.setVisible(false);
-            new userGUI().setVisible(true);
+            StartGUI start = new StartGUI();
+            start.setVisible(true);
+            start.setLocation(this.getX(),this.getY());
         }
         else{
             alertBar.setText("Invalid login");

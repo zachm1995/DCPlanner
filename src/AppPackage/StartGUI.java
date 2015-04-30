@@ -138,12 +138,16 @@ public class StartGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_frameDragMousePressed
 
     private void regTileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regTileMouseClicked
-        new RegGUI().setVisible(true);
+        RegGUI regis = new RegGUI();
+        regis.setVisible(true);
+        regis.setLocation(this.getX(), this.getY());
         this.setVisible(false);
     }//GEN-LAST:event_regTileMouseClicked
 
     private void logTileMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logTileMouseReleased
-        new loginGUI().setVisible(true);
+        loginGUI login = new loginGUI();
+        login.setVisible(true);
+        login.setLocation(this.getX(), this.getY());
         this.setVisible(false);
     }//GEN-LAST:event_logTileMouseReleased
 

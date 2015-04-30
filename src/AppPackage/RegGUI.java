@@ -242,7 +242,9 @@ public class RegGUI extends javax.swing.JFrame {
 
     private void backTileMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backTileMouseReleased
         this.setVisible(false);
-        new StartGUI().setVisible(true);
+        StartGUI start = new StartGUI();
+        start.setVisible(true);
+        start.setLocation(this.getX(),this.getY());
     }//GEN-LAST:event_backTileMouseReleased
 
     private void backgroundKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_backgroundKeyPressed
@@ -260,7 +262,9 @@ public class RegGUI extends javax.swing.JFrame {
                     }
                     else{
                         this.setVisible(false);
-                        new StartGUI().setVisible(true);
+                        StartGUI start = new StartGUI();
+                        start.setVisible(true);
+                        start.setLocation(this.getX(),this.getY());
                     }
                 }
                 catch(Exception e){
@@ -289,7 +293,9 @@ public class RegGUI extends javax.swing.JFrame {
                     }
                     else{
                         this.setVisible(false);
-                        new StartGUI().setVisible(true);
+                        StartGUI start = new StartGUI();
+                        start.setVisible(true);
+                        start.setLocation(this.getX(),this.getY()); 
                     }
                 }
                 catch(Exception e){
@@ -318,7 +324,9 @@ public class RegGUI extends javax.swing.JFrame {
                     }
                     else{
                         this.setVisible(false);
-                        new StartGUI().setVisible(true);
+                        StartGUI start = new StartGUI();
+                        start.setVisible(true);
+                        start.setLocation(this.getX(),this.getY());
                     }
                 }
                 catch(Exception e){
@@ -343,7 +351,9 @@ public class RegGUI extends javax.swing.JFrame {
             }
             else{
                 this.setVisible(false);
-                new StartGUI().setVisible(true);
+                StartGUI start = new StartGUI();
+                start.setVisible(true);
+                start.setLocation(this.getX(),this.getY());
             }
             }
             catch(Exception e){
